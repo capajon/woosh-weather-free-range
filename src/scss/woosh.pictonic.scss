@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+$baseFontUrl : "http://www.joncapa.com/weather/fonts/pictonic/fonts/";
+
+@font-face
+{ 
+    font-family: pictonic;
+    src: url("#{$baseFontUrl}pictonic.eot");
+    src: url("#{$baseFontUrl}pictonic.eot?#iefix") format("embedded-opentype"),
+        url("#{$baseFontUrl}pictonic.ttf") format("truetype"),
+        url("#{$baseFontUrl}pictonic.woff") format("woff"),
+        url("#{$baseFontUrl}pictonic.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+.icon
+{
+	font-family: "pictonic";
+	font-weight: normal; font-style: normal;
+	-webkit-font-smoothing:  antialiased !important;
+	-moz-font-smoothing:  antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important; 
+	font-smoothing:  antialiased !important;
+	line-height:1em;
+}
+ 
+a.icon, span.icon, small.icon {
+	display: -moz-inline-stack;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+}
+ 
+[class^="icon-"], [class*="icon-"]
+{
+	font-family: "pictonic";
+	font-weight: normal; font-style: normal;
+	-webkit-font-smoothing:  antialiased !important;
+	-moz-font-smoothing:  antialiased !important;
+	font-smoothing:  antialiased !important;
+	line-height:1em;
+}
+ 
+a[class^="icon-"], a[class*="icon-"], span[class^="icon-"], span[class*="icon-"], small[class^="icon-"], small[class*="icon-"] {
+	display: -moz-inline-stack;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+}
+  
+.icon-cr-info:before { content:""; } 
+.icon-thunderbolt:before { content:""; } 
+.icon-pin-3:before { content:""; } 
+.icon-oxp-pin:before { content:""; } 
+.icon-earth:before { content:""; } 
+.icon-wtr-fog01:before { content:""; } 
+.icon-wtr-rain01:before { content:""; } 
+.icon-wtr-mooncloud:before { content:""; } 
+.icon-wtr-rain03:before { content:""; } 
+.icon-wtr-sun04:before { content:""; } 
+.icon-wtr-cloud01:before { content:""; } 
+.icon-wtr-suncloud:before { content:""; } 
+.icon-wtr-thunder03:before { content:""; } 
+.icon-wtr-clouds02:before { content:""; } 
+.icon-wtr-snow02:before { content:""; } 
+.icon-wtr-clouds01:before { content:""; } 
+.icon-lm-burjelarab:before { content:""; } 
+.icon-lm-credentor:before { content:""; } 
+.icon-lm-empirestate:before { content:""; } 
+.icon-lm-china:before { content:""; } 
+.icon-lm-bigben:before { content:""; } 
+.icon-lm-eiffel1:before { content:""; } 
+.icon-lm-pyramids2:before { content:""; } 
+.icon-lm-athens:before { content:""; } 
+.icon-lm-moscow:before { content:""; } 
+.icon-lm-colosseum:before { content:""; } 
+.icon-lm-hagiasophia:before { content:""; } 
+.icon-lm-brandenburg:before { content:""; } 
+.icon-mapmarker-00:before { content:""; } 
+.icon-search:before { content:""; } 
+.icon-cr2-info:before { content:""; } 
+.icon-kub-warning:before { content:""; } 
+.icon-weblink_2:before { content:""; } 
+.icon-chevron-up:before { content:""; } 
+.icon-chevron-down:before { content:""; } 
+.icon-thermo:before { content:""; } 
+.icon-wtr-celcius:before { content:""; } 
+.icon-wtr-fahrenheit:before { content:""; }

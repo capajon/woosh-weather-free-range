@@ -1,0 +1,33 @@
+{
+	"Markup": {
+		"WooshWeatherDivId": "woosh-main"
+	},
+	"Api": {
+		"UrlBase": "http://api.openweathermap.org/data/2.5/",
+		"ApiKey": "ff008340622e642273d3d7f7ab489231"
+	},
+	"General": {
+		"EventNamespace": "wooshweather",
+		"FadeInTimeMs": 600
+	},
+	"PictonicIconMappings": {
+		"01d": "icon-wtr-sun04",
+		"01n": "icon-wtr-mooncloud",
+		"02d": "icon-wtr-suncloud",
+		"02n": "icon-wtr-mooncloud",
+		"03d": "icon-wtr-cloud01",
+		"03n": "icon-wtr-cloud01",
+		"04d": "icon-wtr-clouds01",
+		"04n": "icon-wtr-clouds01",
+		"09d": "icon-wtr-clouds02",
+		"09n": "icon-wtr-clouds02",
+		"10d": "icon-wtr-rain03",
+		"10n": "icon-wtr-rain01",
+		"11d": "icon-wtr-thunder03",
+		"11n": "icon-wtr-thunder03",
+		"13d": "icon-wtr-snow02",
+		"13n": "icon-wtr-snow02",
+		"50d": "icon-wtr-fog01",
+		"50n": "icon-wtr-fog01"
+	}
+}

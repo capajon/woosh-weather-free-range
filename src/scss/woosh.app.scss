@@ -1,0 +1,349 @@
+@import 'woosh.pictonic';
+
+// TO DO create mixins and use/create VUI sass mixins
+
+$primary-color: #e87511;
+$secondary-color: #007795;
+$tertiary-color: #4ca454;
+$error-font-color: #d60000;
+$regular-font-color: #3c3c3c;
+
+#woosh-main { // TO DO should pull from settings.json
+	min-width: 250px;
+	max-width: 980px;
+	min-height: 27em;
+	margin: 0 auto;
+	padding: 1em 0.5em;
+	@media screen and (max-width: 1100px){
+		font-size: 1.1em;
+	}
+	@media screen and (max-width: 1000px){
+		font-size: 1em;
+	}
+	@media screen and (max-width: 900px){
+		font-size: 0.9em;
+	}
+
+	.clearfix:before, .clearfix:after {
+		content: " ";
+		display: table;
+	}
+	.clearfix:after {
+		clear: both;
+	}
+
+	div.header {
+		position: relative;
+
+		div.message {
+			margin: 0 0 2em 0;
+			padding: 0;
+			font-weight: 700;
+			-webkit-transition: color 400ms linear;
+			-moz-transition: color 400ms linear;
+			-o-transition: color 400ms linear;
+			-ms-transition: color 400ms linear;
+			transition: color 400ms linear;
+
+			p {
+				font-size: 1.35em;
+				margin: 0.5em 0;
+
+				span[class*="icon-"] {
+					font-size: 1.5em;
+					vertical-align: middle;
+					color: #4e4e4e;
+					margin: -0.11em 0.25em 0 0;
+					-webkit-transition: color 400ms linear;
+					-moz-transition: color 400ms linear;
+					-o-transition: color 400ms linear;
+					-ms-transition: color 400ms linear;
+					transition: color 400ms linear;
+				}
+			}
+		}
+		div.message.error {
+			span[class*="icon-"]{
+				color: $error-font-color;
+			}
+			p {
+				color: $error-font-color;
+			}
+		}
+
+		form.search {
+			display: inline-block;
+			background: $primary-color;
+			border: 0.3em solid $primary-color;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@media screen and (max-width: 700px){
+				position: static;
+				margin: 0.5em 0 1em 0;
+			}
+
+			input[type=text] {
+				font-size: 1.2em;
+				width: 12em;
+				margin: 0;
+				padding:0.4em;
+				background: #fff;
+				border:0px solid #dbdbdb;
+				@media screen and (max-width: 420px){
+					width: 9em;
+					font-size: 1em;
+				}
+			}
+
+			input[type=submit] {
+				font: 700 1.5em/100% 'Oswald', sans-serif;
+				color: #fff;
+				text-transform: uppercase;
+				min-width: 3.2em;
+				margin: 0;
+				padding: 0.3em;
+				background: $primary-color;
+				border: 0px;
+				cursor: pointer;
+				-webkit-transition: background 200ms linear;
+				-moz-transition: background 200ms linear;
+				-o-transition: background 200ms linear;
+				-ms-transition: background 200ms linear;
+				transition: background 200ms linear;
+			}
+
+			input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+				background: $tertiary-color;
+			}
+
+			input[type=submit].disabled{
+				background: #727272;
+				cursor: default;
+			}
+		}
+	}
+
+	div.welcome {
+		padding: 0.25em;
+		width: 100%;
+		text-align: center;
+
+		a.geolocate {
+			font-size: 1.35em;
+			color: $regular-font-color;
+			font-weight: 700;
+			text-decoration: underline;
+			margin-bottom: 2em;
+
+			span[class*="icon-"], span[class*="icon-"], span[class*="icon-"]{
+				font-size: 1.7em;
+				color: #175875;
+				margin: 0 0.1em 0 0;
+				-webkit-transition: color 150ms linear;
+				-moz-transition: color 150ms linear;
+				-o-transition: color 150ms linear;
+				-ms-transition: color 150ms linear;
+				transition: color 150ms linear;
+			}
+		}
+		a.geolocate:hover, a.geolocate:focus, a.geolocate:active {
+			span[class*="icon-"], span[class*="icon-"], span[class*="icon-"]{
+				text-decoration: none;
+				color: $tertiary-color;
+			}
+		}
+
+		h2 {
+			text-align: left;
+			display: block;
+			border-bottom :3px solid $secondary-color;
+			padding: 0.35em;
+			color: #000;
+		}
+
+		ul.quick-picks {
+			margin: 0 2em;
+			display: inline;
+			text-align: left;
+			display: block;
+			@media screen and (max-width: 1000px){
+				margin: 0;
+			}
+
+			li {
+				float: left;
+				width: 14em;
+				margin: 1.25em 2em 0.25em 0;
+				list-style-type: none;
+				@media screen and (max-width: 1500px){
+					width: 10em;
+				}
+				@media screen and (max-width: 900px){
+					width: 13em;
+				}
+			}
+			a {
+				font-size: 1.1em;
+				font-weight: 700;
+				color: $regular-font-color;
+				text-decoration: none;
+				display: inline-block;
+				@media screen and (max-width: 1500px){
+					font-size: 1em;
+				}
+				@media screen and (max-width: 900px){
+					font-size: 1.2em;
+				}
+			}
+			span[class*="icon-"] {
+				font-size: 2em;
+				color: #175875;
+				margin: 0em 0.35em 0 0;
+				-webkit-transition: color 150ms linear;
+				-moz-transition: color 150ms linear;
+				-o-transition: color 150ms linear;
+				-ms-transition: color 150ms linear;
+				transition: color 150ms linear;
+			}
+			a:hover, a:focus, a:active {
+				text-decoration: underline;
+
+				span[class*="icon-"] {
+					color: $tertiary-color;
+				}
+			}
+		}
+		ul.quick-picks.disabled a {
+			text-decoration: none;
+			color: #787878;
+
+			span[class*="icon-"] {
+				color: #787878 !important;
+			}
+		}
+	}
+
+	div.forecast {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		@media screen and (max-width: 1250px){
+			font-size: 0.9em;
+		}
+		@media screen and (max-width: 900px){
+			font-size: 0.8em;
+		}
+		@media screen and (max-width: 700px){
+			font-size: 0.7em;
+			display: block;
+		}
+
+		> ol {
+			display: table-row;
+			@media screen and (max-width: 700px){
+				display: block;
+				padding-left: 0;
+			}
+
+			> li {
+				display: table-cell;
+				border-left:1.6em;
+				border-style:solid;
+				border-color:transparent;
+				text-align: center;
+				@media screen and (max-width: 700px){
+					display: block;
+					border: 0;
+					text-align: left;
+					margin-bottom: 4em;
+				}
+
+				h2 {
+					font-size: 1.5em;
+					line-height: 100%;
+					font-family: 'Oswald', sans-serif;
+					font-weight: 700;
+					text-transform: uppercase;
+					display: block;
+					background: $secondary-color;
+					margin: 0.1em 0 0 0;
+					padding: 0.35em;
+					color: #fff;
+					@media screen and (max-width: 700px){
+						font-size: 2em;
+					}
+				}
+				ul.weather-info {
+					padding: 0;
+
+					li {
+						display: block;
+						font-weight: 700;
+						@media screen and (max-width: 700px){
+							display: inline-block;
+							margin: 0 20px 0 0 !important;
+							font-weight: 700;
+							vertical-align: middle;
+							min-height: 0 !important;
+						}
+					}
+					span[class*="icon-"] {
+						color: $secondary-color;
+						font-size: 8em;
+						display: block;
+						margin-top: 0.13em;
+						@media screen and (max-width: 1450px){
+							font-size: 7em;
+						}
+					}
+					li.condition {
+						color: $secondary-color;
+						font-size: 1.2em;
+						margin-top: 0.5em;
+						min-height: 2.4em;
+						@media screen and (max-width: 900px){
+							font-size: 1.6em;
+							line-height: 140%;
+						}
+						@media screen and (max-width: 700px){
+							min-height: 2.7em;
+						}
+						@media screen and (max-width: 700px){
+							width: 5em;
+						}
+					}
+					li.temp-high {
+						font-size: 4.5em;
+						margin-top: 0.5em;
+					}
+					li.temp-low {
+						font-size: 1.6em;
+						margin-top: 1em;
+						@media screen and (max-width: 900px){
+							font-size: 2em;
+						}
+
+						span {
+							font-size: 0.55em;
+							display:inline;
+							color: $regular-font-color;
+							vertical-align:super;
+						}
+					}
+				}
+			}
+			li:first-child {
+				border-left: none;
+
+				h2 {
+					background: $primary-color;
+				}
+			}
+		}
+	}
+
+	div.footer {
+		min-height: 3em;
+	}
+}

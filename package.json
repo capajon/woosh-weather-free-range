@@ -1,0 +1,40 @@
+{
+  "name": "woosh-weather",
+  "description": "Jon's attempt to convert woosh weather to a D2L free range app",
+  "appId": "woosh-weather-default",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prebuild": "npm run clean -s",
+    "build:js": "browserify -x d2l-orgunit -s woosh-weather ./src/woosh.app.js > ./dist/app.js",
+    "build:appconfig-local": "gulp appconfig-local",
+    "build:appconfig-release": "gulp appconfig-release",
+    "prebuild:release": "npm run clean -s",
+    "build:release": "npm run build:js -s && npm run build:appconfig-release -s",
+    "build": "npm run build:js && npm run build:appconfig-local",
+    "clean": "rimraf dist && mkdir dist"
+  },
+  "devDependencies": {
+    "browserify": "^6.3.2",
+    "free-range-app-utils": "^0.1.0",
+    "gulp": "^3.8.10",
+    "gulp-frau-publisher": "^2.1.3",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.1.0",
+    "rimraf": "^2.2.8",
+    "sassify": "^0.5.2",
+    "streamifier": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "q": "^1.2.0",
+    "superagent": "^0.21.0",
+    "superagent-d2l-session-auth": "^0.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "sassify"
+    ]
+  }
+}
