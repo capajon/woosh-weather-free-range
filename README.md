@@ -19,8 +19,8 @@ These steps create an appconfig file that points to your localhost, and publishe
 **Process**
 
 1. Run `npm run build`. This builds the UMD module and creates the local appconfig file. 
-2. In a separate terminal window, run `gulp appresolver`.  This will host/resolve the app on `http://localhost:3000/resolve/hellobarb`.
-3. In your browser, log in to your LMS and access the app by changing the URI to `/d2l/apps/hellobarb`.
+2. In a separate terminal window, run `gulp appresolver`.  This will host/resolve the app on `http://localhost:3000/resolve/woosh-weather`.
+3. In your browser, log in to your LMS and access the app by changing the URI to `/d2l/apps/woosh-weather`.
 
 
 ### Build to CDN ###
